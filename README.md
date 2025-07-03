@@ -1,5 +1,7 @@
 # NPS (Net Promoter Score) Application
 
+![plot](./NPSFeedbackHub.png)
+
 A full-stack application for collecting and analyzing Net Promoter Score feedback, built with a modern tech stack featuring a .NET 9 backend API and Next.js frontend.
 
 ## Table of Contents
