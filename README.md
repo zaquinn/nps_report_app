@@ -169,7 +169,7 @@ public static double Calculate(List<CustomerResponse> responses)
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd TesteTecnico
+   cd nps_report_app
    ```
 
 2. **Start all services**
