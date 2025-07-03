@@ -165,21 +165,21 @@ export default function AnalyticsCharts({ data }: AnalyticsChartsProps) {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span className="text-sm text-gray-700">Promoters (9-10)</span>
+                <span className="text-sm text-gray-700">Promoters (4-5)</span>
               </div>
               <span className="text-sm font-medium">{promoters}</span>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                <span className="text-sm text-gray-700">Neutral (7-8)</span>
+                <span className="text-sm text-gray-700">Neutral (3)</span>
               </div>
               <span className="text-sm font-medium">{neutral}</span>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                <span className="text-sm text-gray-700">Detractors (0-6)</span>
+                <span className="text-sm text-gray-700">Detractors (0-2)</span>
               </div>
               <span className="text-sm font-medium">{detractors}</span>
             </div>
