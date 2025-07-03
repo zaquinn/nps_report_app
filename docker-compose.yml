@@ -1,0 +1,42 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: nps-postgres
+    environment:
+      POSTGRES_DB: npsdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d npsdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - nps-network
+
+  nps-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nps-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Default=Host=postgres;Port=5432;Database=npsdb;Username=postgres;Password=postgres
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - nps-network
+
+volumes:
+  postgres_data:
+
+networks:
+  nps-network:
+    driver: bridge
