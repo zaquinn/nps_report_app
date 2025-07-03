@@ -25,12 +25,27 @@ services:
       dockerfile: Dockerfile
     container_name: nps-api
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
       - ConnectionStrings__Default=Host=postgres;Port=5432;Database=npsdb;Username=postgres;Password=postgres
     ports:
       - "8080:8080"
     depends_on:
       - postgres
+    networks:
+      - nps-network
+
+  nps-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: nps-frontend
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://localhost:8080
+    ports:
+      - "3000:3000"
+    depends_on:
+      - nps-api
     networks:
       - nps-network
 

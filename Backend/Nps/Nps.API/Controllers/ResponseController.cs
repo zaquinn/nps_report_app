@@ -26,7 +26,7 @@ public class ResponsesController(IResponseRepository repository) : ControllerBas
         };
 
         await repository.AddAsync(response);
-        return Created();
+        return Created("",response);
     }
 
     [HttpGet("report")]
