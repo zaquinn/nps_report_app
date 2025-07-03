@@ -23,7 +23,7 @@ A full-stack application for collecting and analyzing Net Promoter Score feedbac
 
 ## Overview
 
-This NPS application allows organizations to collect customer feedback through a simple rating system (0-10 scale) and provides analytics to track customer satisfaction trends. The system categorizes responses into Detractors (0-6), Passives (7-8), and Promoters (9-10) to calculate the Net Promoter Score.
+This NPS application allows organizations to collect customer feedback through a simple rating system (0-5 scale) and provides analytics to track customer satisfaction trends. The system categorizes responses into Detractors (0-2), Neutrals (3), and Promoters (4-5) to calculate the Net Promoter Score.
 
 ## Technologies Used
 
