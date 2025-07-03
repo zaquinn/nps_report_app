@@ -124,16 +124,6 @@ public static double Calculate(List<CustomerResponse> responses)
 
 4. **Result**: Returns the score rounded to 2 decimal places
 
-### Score Interpretation
-
-- **Score Range**: -100 to +100
-- **Excellent**: 70 to 100
-- **Good**: 50 to 69
-- **Acceptable**: 0 to 49
-- **Needs Improvement**: -100 to -1
-
-This implementation follows the industry-standard NPS calculation methodology, providing accurate customer satisfaction metrics for business intelligence and decision-making.
-
 ## Frontend (Next.js)
 
 ### Features
@@ -261,6 +251,8 @@ When the backend is running, visit `/swagger` endpoint to explore the API:
 - Local: http://localhost:8080/swagger
 - Interactive API documentation
 - Test endpoints directly from the browser
+
+Pay attention that the current implementation of docker-compose.yml is set to use the production configuration environment. If you want to run the application in development mode, you need to change the environment variable `ASPNETCORE_ENVIRONMENT` to `Development` in the `docker-compose.yml` file.
 
 ---
 
